@@ -1,5 +1,11 @@
 #!/bin/bash
 
+# Load entorepo bashrc
+source /opt/entorepo/.bashrc
+
+CURRDIR=$PWD
+rm -rf ncbi-blast-2.10.1+-x64-linux.tar.gz ncbi-blast-2.10.1+ >& /dev/null
+
 wget ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/2.10.1/ncbi-blast-2.10.1+-x64-linux.tar.gz
 tar -xf ncbi-blast-2.10.1+-x64-linux.tar.gz
 
