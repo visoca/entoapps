@@ -4,8 +4,10 @@
 
 cat > /opt/entorepo/.bashrc <<'EOF'
 echo
-echo "  Your account is set up to use entorepo"
-echo
+echo "  ********************************************"
+echo "  ** Your account is set up to use entorepo **"
+echo "  ********************************************"
+echo 
 
 
 # path to executables and libraries
