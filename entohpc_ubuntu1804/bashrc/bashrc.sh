@@ -17,4 +17,6 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/entorepo/lib/lib
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/entorepo/lib
 export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/opt/entorepo/lib/lib/pkgconfig
 
+source /opt/entorepo/apps/anaconda3/2021.05/etc/profile.d/conda.sh
+
 EOF
