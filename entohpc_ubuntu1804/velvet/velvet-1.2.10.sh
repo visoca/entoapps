@@ -1,0 +1,27 @@
+#!/bin/bash
+
+# load entorepo
+source /opt/entorepo/.bashrc
+
+
+CURRDIR=$PWD
+
+rm -rf velvet >& /dev/null
+
+git clone --recursive https://github.com/dzerbino/velvet.git
+cd velvet
+make CATEGORIES=24 MAXKMERLENGTH=201 OPENMP=1
+
+rm -rf /opt/entorepo/apps/velvet/1.2.10 >& /dev/null
+
+mkdir -p /opt/entorepo/apps/velvet/1.2.10
+cp -r * /opt/entorepo/apps/velvet/1.2.10
+
+cd /opt/entorepo/apps/velvet/
+rm current >& /dev/null
+ln -sTf 1.2.10 current
+
+ln -sf /opt/entorepo/apps/velvet/current/velvet* /opt/entorepo/bin/
+
+cd $CURRDIR
+rm -rf velvet
