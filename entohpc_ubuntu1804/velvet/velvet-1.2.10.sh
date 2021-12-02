@@ -10,7 +10,15 @@ rm -rf velvet >& /dev/null
 
 git clone --recursive https://github.com/dzerbino/velvet.git
 cd velvet
-make CATEGORIES=24 MAXKMERLENGTH=201 OPENMP=1
+make CATEGORIES=4 MAXKMERLENGTH=71 OPENMP=1
+mv velveth velveth-k71
+mv velvetg velvetg-k71
+make clean
+make CATEGORIES=4 MAXKMERLENGTH=201 OPENMP=1
+mv velveth velveth-k201
+mv velvetg velvetg-k201
+ln -s velveth-k201 velveth
+ln -s velvetg-k201 velvetg
 
 rm -rf /opt/entorepo/apps/velvet/1.2.10 >& /dev/null
 
