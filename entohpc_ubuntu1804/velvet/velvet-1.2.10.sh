@@ -13,19 +13,15 @@ cd velvet
 make CATEGORIES=4 MAXKMERLENGTH=51 OPENMP=1
 mv velveth velveth-k51
 mv velvetg velvetg-k51
-make clean
 make CATEGORIES=4 MAXKMERLENGTH=71 OPENMP=1
 mv velveth velveth-k71
 mv velvetg velvetg-k71
-make clean
 make CATEGORIES=4 MAXKMERLENGTH=101 OPENMP=1
 mv velveth velveth-k101
 mv velvetg velvetg-k101
-make clean
 make CATEGORIES=4 MAXKMERLENGTH=201 OPENMP=1
 mv velveth velveth-k201
 mv velvetg velvetg-k201
-make clean
 
 # set default
 ln -s velveth-k201 velveth
