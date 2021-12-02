@@ -10,10 +10,20 @@ rm -rf oases >& /dev/null
 
 git clone --recursive https://github.com/dzerbino/oases
 cd oases
+make CATEGORIES=4 MAXKMERLENGTH=51 OPENMP=1
+mv oases oases-k51
+make clean
 make CATEGORIES=4 MAXKMERLENGTH=71 OPENMP=1
 mv oases oases-k71
+make clean
+make CATEGORIES=4 MAXKMERLENGTH=101 OPENMP=1
+mv oases oases-k101
+make clean
 make CATEGORIES=4 MAXKMERLENGTH=201 OPENMP=1
 mv oases oases-k201
+make clean
+
+# set default
 ln -s oases-k201 oases
 
 perl -pi -e 's/env python/env python2/g' scripts/oases_pipeline.py
