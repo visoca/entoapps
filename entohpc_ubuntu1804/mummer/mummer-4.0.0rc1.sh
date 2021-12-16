@@ -26,4 +26,4 @@ ln -sf /opt/entorepo/apps/mummer/current/bin/* /opt/entorepo/bin/
 
 cd $CURRDIR
 
-rm -rf mummer-4.0.0rc1 mummer-4.0.0rc1.tar.g
+rm -rf mummer-4.0.0rc1 mummer-4.0.0rc1.tar.gz
