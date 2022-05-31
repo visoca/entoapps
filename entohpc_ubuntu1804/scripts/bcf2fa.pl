@@ -2,7 +2,7 @@
 
 # (c) Victor Soria-Carrasco
 # victor.soria.carrasco@gmail.com
-# Last modified: 31/05/2022 03:57:33
+# Last modified: 31/05/2022 04:17:56
 
 # Description:
 # Converts a bcf file to a multiple aligment in fasta format
@@ -76,8 +76,8 @@ my $version='1.63-2017.11.28';
 &author;
 
 # External programs:
-# my $bcftools='bcftools';
-my $bcftools='/usr/local/extras/Genomics/apps/bcftools/1.5/bin/bcftools';
+my $bcftools='bcftools';
+# my $bcftools='/usr/local/extras/Genomics/apps/bcftools/1.5/bin/bcftools';
 my $bcftools_version=`$bcftools |& grep Version | awk '{print \$2}'`;
 
 my $ifile; # input file
