@@ -1,7 +1,7 @@
 #!/usr/bin/env perl
 
 # (c) Victor Soria-Carrasco
-# Last modified: 31/05/2022 04:33:58
+# Last modified: 06/06/2022 16:41:34
 
 # Description:
 # This script estimate genotype probabilities and 
@@ -18,7 +18,7 @@ use Getopt::Long;
 use File::Basename;
 use File::Path qw(make_path);
 
-my $version='1.41-2022.05.31';
+my $version='1.41-2022.06.06';
 
 # Changelog
 # 03/03/2016
@@ -36,8 +36,8 @@ my $version='1.41-2022.05.31';
 
 &author;
 
-# my $bcftools='bcftools';
-my $bcftools='/usr/local/extras/Genomics/apps/bcftools/1.9/bin/bcftools';
+my $bcftools='bcftools';
+# my $bcftools='/usr/local/extras/Genomics/apps/bcftools/1.9/bin/bcftools';
 
 my $bcftools_version=`$bcftools |& grep Version | awk '{print \$2}'`;
 
