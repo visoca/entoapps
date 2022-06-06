@@ -1,8 +1,8 @@
-#!/usr/local/extras/Genomics/bin/Rscript
+#!/usr/bin/Rscript
 
 # (c) Victor Soria-Carrasco
 # victor.soria.carrasco@gmail.com
-# Last modified: 31/05/2022 04:34:48
+# Last modified: 06/06/2022 17:31:03
 
 # Description:
 # This script calculates PCA and produces PC plots 
