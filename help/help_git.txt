@@ -1,0 +1,50 @@
+# Set up git to connect to github with SSH
+===========================================================================
+1. Create a passwordless ssh key to be used with github(press enter when asking for passphrase
+	ssh-keygen -t rsa -b 8192 -f $HOME/.ssh/github
+
+2. Add ssh key to github
+	a. Copy public ssh key (shown using cat $HOME/.ssh/github.pub)
+	b. Go to your github account
+	c. Click on profile photo -> Settings
+	d. Click on SSH and GPG keys in the left sidebar
+	e. Click on New SSH key, write 'entohpc' in title, and paste the key in the Key box
+
+3. Configure ssh to use key for github
+	# be aware you need to use full path to home folder
+	a. Edit $HOME/.ssh/config and add
+		Host github.com
+		IdentityFile /usr/users/JIC_a1/<user>/.ssh/github
+	b. Check it works
+		ssh -T git@github.com
+
+# Set up new repository from local folder
+===========================================================================
+1. Create project folder
+	mkdir -p /data/<myproject>
+
+2. Initialise repository
+	cd /data/<myproject>
+	git init
+	git add .
+	gh config set git_protocol ssh -h github.com
+	gh repo create
+		-> Push an existing local repository to GitHub
+		-> Path to local repository (.) (default)
+		-> Repository name (myproject) (default)
+		-> Description brief description of project
+		-> Visibility Private
+		-> Add a remote? Y (default)
+		-> What should the new remote be called? (origin) (default)
+
+	cat "This is the repository of project myproject" > README.md	
+	git add README.md
+	git commit -m "Added README.md"
+	git push --set-upstream origin master
+
+
+
+Links:
+
+
+
