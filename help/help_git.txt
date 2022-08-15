@@ -26,7 +26,6 @@
 2. Initialise repository
 	cd /data/<myproject>
 	git init
-	git add .
 	gh config set git_protocol ssh -h github.com
 	gh repo create
 		-> Push an existing local repository to GitHub
