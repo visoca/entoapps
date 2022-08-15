@@ -37,7 +37,7 @@
 		-> Add a remote? Y (default)
 		-> What should the new remote be called? (origin) (default)
 
-	cat "This is the repository of project myproject" > README.md	
+	echo "This is the repository of project myproject" > README.md	
 	git add README.md
 	git commit -m "Added README.md"
 	git push --set-upstream origin master
