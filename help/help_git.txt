@@ -17,6 +17,9 @@
 		IdentityFile /usr/users/JIC_a1/<user>/.ssh/github
 	b. Check it works
 		ssh -T git@github.com
+4. Configure git to use github
+	git config --global user.email "myemail@email.com"
+	git config --global user.name "mygitusername"
 
 # Set up new repository from local folder
 ===========================================================================
