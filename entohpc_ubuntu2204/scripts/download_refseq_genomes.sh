@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # This script downloads the latest version of RefSeq genomes
+# Be aware downloading all the genomes takes several days
 
 DB_PATH='/fastdata/db'
 NCBI_FTP='ftp.ncbi.nlm.nih.gov'
