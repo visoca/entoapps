@@ -1,24 +1,29 @@
 #!/bin/bash
 
-# Create mash sketch library using RefSeq genomes
+# This script creates a mash sketch library using RefSeq genomes
+# RefSeq genomes can be downloaded using the script download_refseq_genomes.sh
 
 REFSEQ_VERSION=216
 
 BASE_DIR='/fastdata/db'
 
+# Directory containing RefSeq genomes (input)
 REFSEQ_DIR="${BASE_DIR}/RefSeq${REFSEQ_VERSION}"
+
+# File where paths to individual genome fasta files will be stored (output)
 REFSEQ_LIST="${BASE_DIR}/refseq_${REFSEQ_VERSION}_fnames.txt"
+
+# Mash sketch library (output)
+MSHLIB="${BASE_DIR}/refseq_${REFSEQ_VERSION}_k${K}_s${S}.msh"
 
 NCPUS=24
 K=21
 S=1000
 
-MSHLIB="${BASE_DIR}/refseq_${REFSEQ_VERSION}_k${K}_s${S}.msh"
-
 # Get paths to genomes
 find ${REFSEQ_DIR} -name "*.fna.gz" | sort -V > ${REFSEQ_LIST}
 
-# Get mash sketch
+# Create mash sketch
 mash sketch \
 -k ${K} \
 -s ${S}	\
