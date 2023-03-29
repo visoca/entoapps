@@ -12,7 +12,7 @@ cd SALSA
 make -j 12
 
 # wrapper
-cat > run_pipeline.sh << 'EOF'
+cat > salsa.sh << 'EOF'
 #!/bin/bash
 
 source /opt/entorepo/.bashrc
@@ -27,8 +27,8 @@ fi
 
 python $DIR/run_pipeline.py $*
 EOF
-chmod +x run_pipeline.sh
-ln -s run_pipeline.sh run_pipeline
+chmod +x salsa.sh
+ln -s salsa.sh salsa
 
 rm -rf /opt/entorepo/apps/salsa/2.3 >& /dev/null
 
@@ -37,7 +37,7 @@ cp -r * /opt/entorepo/apps/salsa/2.3
 cd /opt/entorepo/apps/salsa
 rm current >& /dev/null
 ln -sTf 2.3 current
-ln -sf /opt/entorepo/apps/salsa/current/run_pipeline /opt/entorepo/bin/
+ln -sf /opt/entorepo/apps/salsa/current/salsa /opt/entorepo/bin/
 
 cd $CURRDIR
 rm -rf SALSA
