@@ -19,4 +19,7 @@ export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/opt/entorepo/lib/lib/pkgconfig
 
 source /opt/entorepo/apps/anaconda3/2022.10/etc/profile.d/conda.sh
 
+# R libraries
+export R_LIBS="/opt/entorepo/lib/Rlibs"
+
 EOF
