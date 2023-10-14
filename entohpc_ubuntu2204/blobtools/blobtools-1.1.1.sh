@@ -10,7 +10,8 @@ rm -rf blobtools >& /dev/null
 git clone https://github.com/DRL/blobtools.git
 cd blobtools
 
-conda create -n blobtools -y
+conda env remove -n blobtools -y
+conda create -n blobtools python=3.7 -y
 conda activate blobtools
 conda install -c anaconda matplotlib docopt tqdm wget pyyaml git -y
 conda install -c bioconda pysam --update-deps -y 
